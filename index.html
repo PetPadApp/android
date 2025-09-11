@@ -260,19 +260,9 @@
     </div>
     
     <script>
-        // Set current year in footer
         document.addEventListener('DOMContentLoaded', function() {
-            // Add footer
-            const currentYear = new Date().getFullYear();
-            const footer = document.createElement('footer');
-            footer.style.textAlign = 'center';
-            footer.style.marginTop = '40px';
-            footer.style.padding = '20px';
-            footer.style.color = '#7f8c8d';
-            footer.style.fontSize = '0.9em';
-            footer.innerHTML = `&copy; ${currentYear} Pet Pad. All rights reserved.`;
-            document.body.appendChild(footer);
-            
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
             // Generate QR Code
             const qrElement = document.getElementById('qrcode');
             // Replace with your actual App Store URL when available
